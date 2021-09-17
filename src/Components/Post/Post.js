@@ -17,7 +17,7 @@ const UserDetail = (props) => {
 
     const { title } = props.post;
     return (
-        <Grid item xs={8}>
+        <Grid item xs={16}>
             <Item>
                 <h3 className="post-title" >{title.toUpperCase()}</h3>
                 <div>

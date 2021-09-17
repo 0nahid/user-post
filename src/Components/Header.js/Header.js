@@ -1,12 +1,14 @@
-import Fingerprint from '@mui/icons-material/Fingerprint';
-import { Button, ButtonGroup, IconButton } from '@mui/material';
 import React from 'react';
+import './Header.css'
 const Header = () => {
     return (
-            <ButtonGroup variant="outlined" aria-label="outlined primary button group" color="error">
-                <Button>One <IconButton aria-label="fingerprint" color="success"><Fingerprint /></IconButton> </Button>
-                <Button>Two <IconButton aria-label="fingerprint" color="primary"><Fingerprint /></IconButton></Button>
-            </ButtonGroup>
+        <div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/post">Post</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </div>
     );
 };
 
