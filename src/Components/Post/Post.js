@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Post.css';
 
 const UserDetail = (props) => {
@@ -15,13 +16,14 @@ const UserDetail = (props) => {
         color: theme.palette.text.secondary,
     }));
 
-    const { title } = props.post;
+    const { title, id } = props.post;
     return (
         <Grid item xs={16}>
             <Item>
-                <h3 className="post-title" >{title.toUpperCase()}</h3>
+                <h3 className="post-title" >{title}</h3>
+                <p>Id: {id}</p>
                 <div>
-                    <Button variant="outlined" color="error"> <KeyboardArrowRightIcon /> View Post</Button>
+                    <Link to={`posts/${id}`}><Button variant="outlined" color="error"> <KeyboardArrowRightIcon /> View Post</Button></Link>
                 </div>
             </Item>
         </Grid>

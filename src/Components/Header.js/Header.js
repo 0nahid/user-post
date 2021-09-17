@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/home">Home</a></li>
                 <li><a href="/post">Post</a></li>
                 <li><a href="/login">Login</a></li>
             </ul>

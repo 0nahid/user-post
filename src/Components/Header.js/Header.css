@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   padding: 10px;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 li {
@@ -11,6 +11,11 @@ li {
   margin-left: 20px;
 }
 li a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
+  font-size: 18px;
+
+}
+li a:hover {
+  color: orangered;
 }

@@ -14,7 +14,7 @@ const Home = () => {
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2} columns={16}>
                     {
-                        posts.map(post => <Post post={post}></Post>)
+                        posts.map(post => <Post post={post} key={post.id}></Post>)
                     }
                 </Grid>
             </Box>
