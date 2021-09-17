@@ -21,7 +21,6 @@ const UserDetail = (props) => {
         <Grid item xs={16}>
             <Item>
                 <h3 className="post-title" >{title}</h3>
-                <p>Id: {id}</p>
                 <div>
                     <Link to={`posts/${id}`}><Button variant="outlined" color="error"> <KeyboardArrowRightIcon /> View Post</Button></Link>
                 </div>
