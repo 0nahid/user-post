@@ -11,11 +11,13 @@ li {
   margin-left: 20px;
 }
 li a {
-  /* text-decoration: none; */
   color: black;
   font-size: 18px;
-
 }
 li a:hover {
   color: orangered;
+}
+
+.profile{
+  float: right;
 }
