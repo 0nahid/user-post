@@ -1,9 +1,11 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Button } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 const PostDetails = () => {
 
@@ -27,6 +29,7 @@ const PostDetails = () => {
             <Item>
                 <h3 className="post-title">{post.title}</h3>
                 <p>{post.body}</p>
+                <Link to={`/home`}><Button variant="outlined" color="secondary"> <ArrowBackIcon /> Back To Home </Button></Link>
             </Item>
         </Grid>
     );
