@@ -1,0 +1,7 @@
+.comment-detail {
+  display: flex;
+  align-items: center;
+}
+.comment {
+  margin-left: 20px;
+}

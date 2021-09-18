@@ -1,11 +1,12 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Button , Avatar } from '@mui/material';
+import { Button, Avatar, Container } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './PostDetails.css'
 
 const PostDetails = () => {
 
@@ -33,7 +34,7 @@ const PostDetails = () => {
     const picID = Math.floor(Math.random() * 100) + 1;
     const picUrl = `https://randomuser.me/api/portraits/men/${picID}.jpg`
     return (
-        <div>
+        <Container>
             <Grid item xs={16}>
                 <Item>
                     <h3 className="post-title">{post.title}</h3>
@@ -41,20 +42,23 @@ const PostDetails = () => {
                     <Link to={`/home`}><Button variant="outlined" color="secondary"> <ArrowBackIcon /> Back To Home </Button></Link>
                 </Item>
             </Grid>
-            <h4>Comments on this post</h4>
+            <h3>Comments on this post</h3>
             {comment.map(comment =>
                 <div>
                     <Grid item xs={16}>
-                        <Item>
-                            <Avatar  sx={{ width: 56, height: 56 }} alt={comment.name} src={picUrl} />
-                            <p className="post-title">{comment.name}</p>
-                            <p className="post-title"><small>{comment.body}</small></p>
+                        <Item className="comment-detail">
+                            <div>
+                                <Avatar sx={{ width: 56, height: 56 }} alt={comment.name} src={picUrl} />
+                            </div>
+                            <div className="comment">
+                                <p className="post-title">{comment.name}</p>
+                                <p className="post-title"><small>{comment.body}</small></p>
+                            </div>
                         </Item>
                     </Grid>
                 </div>
             )}
-
-        </div>
+        </Container>
     );
 };
 
