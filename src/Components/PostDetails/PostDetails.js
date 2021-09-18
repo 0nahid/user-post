@@ -33,6 +33,12 @@ const PostDetails = () => {
     }, [postId])
     const picID = Math.floor(Math.random() * 100) + 1;
     const picUrl = `https://randomuser.me/api/portraits/men/${picID}.jpg`
+    // image details
+    const [image, setImage] = useState([]);
+    useEffect(() => {
+        axios(`https://mocki.io/v1/cf1323a4-200f-4a95-a4c8-947b8b49daa4`)
+            .then(data => setImage(data.data));
+    }, [])
     return (
         <Container>
             <Grid item xs={16}>
